@@ -41,10 +41,10 @@ todoInput.value = "";
 }
 
 function completedTodo(e) {
-  const todoIem = e.target;
-  if (todoIem.classList[0] === "check-btn"){
-    const check = todoIem.parentElement;
-    check.toggle();
+  const item = e.target;
+  if (item.classList[0] === "check-btn"){
+    const check = item.parentElement;
+    check.classList.toggle("completed");
   }
   // todoIem.remove();
 }
