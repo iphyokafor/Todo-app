@@ -54,6 +54,9 @@ function deleteTodo(e){
 
   if(todoItem.classList[0] === "delete-btn"){
     const todo = todoItem.parentElement;
-    todo.remove();
+    todo.classList.add("fall");
+    todo.addEventListener("transitioned", function(){
+      todo.remove();
+    })
   }
 }
